@@ -35,7 +35,7 @@ class NewsController extends Controller
 
             $uploaded = $request->file('image');
             $extension = $uploaded->getClientOriginalExtension();
-            $image_name = time()."_img"."$extension";
+            $image_name = time()."_img"."."."$extension";
             $uploaded->move(public_path('assets/img/news'), $image_name);
             $full_path = '/assets/img/news/'.$image_name;
         }
@@ -73,7 +73,7 @@ class NewsController extends Controller
 
             $uploaded = $request->file('image');
             $extension = $uploaded->getClientOriginalExtension();
-            $image_name = time()."_img"."$extension";
+            $image_name = time()."_img"."."."$extension";
             $uploaded->move(public_path('assets/img/news'), $image_name);
             $full_path = '/assets/img/news/'.$image_name;
         }
